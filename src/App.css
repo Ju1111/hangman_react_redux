@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 .App {
   text-align: center;
 }
 
 #logo {
-  animation: App-logo-spin infinite 10s linear;
+  animation: App-logo-spin infinite 7s linear;
   height: 100px;
   transition: all 0.5s;
 }
 
 #logo:hover {
-  height: 160px;
+  height: 180px;
 }
 
 .App-header {
@@ -19,8 +21,8 @@
   color: white;
 }
 
-title {
-  font-size: 3em;
+body {
+  font-family: 'Press Start 2P', cursive, 'Arial';
 }
 
 @keyframes App-logo-spin {

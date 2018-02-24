@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LogoImg from './game.png';
 import './App.css';
+import Title from './components/Title'
 
 class App extends Component {
   render() {
@@ -8,7 +9,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img id="logo" src={LogoImg} alt=''/>
-          <h1 className="title">HANGMAAAAAN</h1>
+          <div>
+            <Title content="HANGMAAAAAAAAN"/>
+          </div>
         </header>
       </div>
     );
