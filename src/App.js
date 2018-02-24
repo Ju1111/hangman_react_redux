@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LogoImg from './game.png';
 import './App.css';
 import Title from './components/Title'
+import Word from './components/Word'
 
 class App extends Component {
   render() {
@@ -13,6 +14,9 @@ class App extends Component {
             <Title content="HANGMAAAAAAAAN"/>
           </div>
         </header>
+        <div className="word">
+          <Word />
+        </div>
       </div>
     );
   }

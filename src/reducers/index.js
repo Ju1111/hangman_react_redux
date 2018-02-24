@@ -1,1 +1,5 @@
-export default {}
+import Word from './word'
+
+export default {
+  Word,
+}
