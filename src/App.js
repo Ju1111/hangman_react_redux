@@ -3,6 +3,7 @@ import LogoImg from './game.png';
 import './App.css';
 import Title from './components/Title'
 import Word from './components/Word'
+import Game from './containers/Game'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
             <Title content="HANGMAAAAAAAAN"/>
           </div>
         </header>
+        <Game />
         <div className="word">
           <Word />
         </div>
