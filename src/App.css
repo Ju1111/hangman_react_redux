@@ -22,6 +22,7 @@
 
 body {
   font-family: 'Press Start 2P', cursive, 'Arial';
+  background-image: url("./background.png");
 }
 
 @keyframes App-logo-spin {

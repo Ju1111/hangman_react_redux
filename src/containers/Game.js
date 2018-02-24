@@ -17,11 +17,14 @@ export class Game extends PureComponent {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    wrongGuessCount: state.wrongGuessCount,
-    guesses: state.guesses
-  }
-}
+const mapStateToProps =
+({wrongGuessCount, guesses}) => ({wrongGuessCount, guesses})
+//
+// state => {
+//   return {
+//     wrongGuessCount: state.wrongGuessCount,
+//     guesses: state.guesses
+//   }
+// }
 
 export default connect(mapStateToProps)(Game)

@@ -1,0 +1,1 @@
+export const LETTER_GUESSED = 'LETTER_GUESSED'
