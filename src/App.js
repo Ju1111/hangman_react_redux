@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LogoImg from './game.png';
 import './App.css';
 import Title from './components/Title'
-import Word from './components/Word'
+import Guess from './components/Guess'
 import Game from './containers/Game'
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
         </header>
         <Game />
         <div className="word">
-          <Word />
+          <Guess />
         </div>
       </div>
     );

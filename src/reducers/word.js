@@ -1,4 +1,5 @@
 import { LETTER_GUESSED } from '../actions/types'
+// import { WRONG_GUESS } from '../actions/types'
 
 const initialState = {
   wrongGuessCount: 0,
@@ -9,11 +10,8 @@ const initialState = {
 export default (state = initialState, { type, payload } = {}) => {
   switch (type) {
     case LETTER_GUESSED :
-      if (state.word.indexOf(payload) === -1) {
-        state.guesses += 1};
       return {
-        ...state, guesses:
-      state.guesses.contact(payload)};
+        ...state, guesses: [...state.guesses, payload] };
       default:
         return state
   }
