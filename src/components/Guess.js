@@ -3,17 +3,15 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { guessLetter } from '../actions/guess'
 
-// var guesses = ['word']
-
 export class Guess extends PureComponent {
   static propTypes = {
-    content: PropTypes.array.isRequired,
+    guesses: PropTypes.array.isRequired,
   }
   render () {
     const { guesses } = this.props
     return (
       <div>
-        <h4>{guesses.join(', ')}</h4>
+        <h4>Your guesses: {guesses}</h4>
       </div>
     )
   }
