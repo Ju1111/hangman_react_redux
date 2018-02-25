@@ -11,13 +11,11 @@ const initialState = {
 export default (state = initialState, { type, payload } = {}) => {
   switch (type) {
     case START_GAME :
-      console.log('Hey there')
       return {...state, word: 'relax'};
     case LETTER_GUESSED :
-      console.log('helllooooooo');
       return {
-        ...state, guesses: [state.guesses, payload] };
+        ...state, guesses:[...state.guesses, payload]};
   default:
-    return state.guesses
+    return state
   }
 }

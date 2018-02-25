@@ -4,27 +4,19 @@ import { connect } from 'react-redux'
 
 export class Game extends PureComponent {
   static propTypes = {
-    game: PropTypes.arrayOf(
-      PropTypes.arrayOf(PropTypes.letter)
-    ).isRequired
+    guesses: PropTypes.arrayOf(
+      PropTypes.string).isRequired
   }
   render() {
+    console.log(this.props.guesses);
     return (
       <div className="Game">
-        <h3>Welcome to Hangman! Ready to go? Guess your first letter!</h3>
+        <h3>Your guesses: {this.props.guesses}</h3>
       </div>
     )
   }
 }
 
-const mapStateToProps =
-({wrongGuessCount, guesses}) => ({wrongGuessCount, guesses})
-//
-// state => {
-//   return {
-//     wrongGuessCount: state.wrongGuessCount,
-//     guesses: state.guesses
-//   }
-// }
+const mapStateToProps = ({guesses}) => ({guesses})
 
 export default connect(mapStateToProps)(Game)

@@ -8,24 +8,20 @@ import { userInput } from '../actions/input'
 class Input extends PureComponent {
   static propTypes = {
     guesses: PropTypes.arrayOf(
-      PropTypes.letter).isRequired
+      PropTypes.string).isRequired
   }
 
   handleChange = (event) => {
     event.preventDefault();
-    console.log(event.target.value);
     this.props.userInput(event.target.value);
-    console.log(event.target.value);
-    this.setState({guess: ''});
-    console.log(event.target.value);
-
+    // event.target.value = ''
   }
 
 
 render() {
     return(
-      <div>
-        Guess a letter:
+      <div className="inputForm">
+        Welcome to Hangman! Ready to go? Guess a letter:
         <form>
           <input onChange={this.handleChange.bind(this)}
             className="userInput"
