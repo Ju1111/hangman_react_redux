@@ -2,39 +2,38 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './input.css'
 import { connect } from 'react-redux'
+import { userInput } from '../actions/input'
 
 
-export class Input extends PureComponent {
-  constructor(props) {
-  super(props);
-  this.state = {value: ''};
-  this.handleSubmit = this.handleSubmit.bind(this);
+class Input extends PureComponent {
+  static propTypes = {
+    guesses: PropTypes.arrayOf(
+      PropTypes.letter).isRequired
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
-    console.log('lovely');
-    console.log(this.refs.user_input.value);
+    this.props.userInput(event.target.value);
+    this.setState({guess: ''});
   }
+
 
 render() {
     return(
       <div>
         Guess a letter:
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <form onSubmit={this.handleSubmit}>
           <input
+            className="userInput"
             type="text"
-            ref="user_input"
-            className="Input"
-            defaultValue={this.state.value}
           />
-          <button type="submit">
+          <button type="submit" className="button">
               Guess
           </button>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default Input
+export default connect(null, { userInput })(Input);

@@ -1,4 +1,4 @@
-.Input {
+.userInput {
   background-color: black;
   color: white;
   width: 20px;
@@ -6,4 +6,18 @@
   border: 1px solid red;
   border-radius: 3px;
   box-shadow: 0 0;
+}
+
+.button {
+  background-color: #990000;
+  border: 1px solid #9E0215;
+  border-radius: 4px;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive, 'Arial';
+}
+
+.button:hover {
+  background-color: #CC0033;
 }

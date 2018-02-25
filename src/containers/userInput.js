@@ -9,20 +9,6 @@ export class UserInput extends PureComponent {
       PropTypes.arrayOf(PropTypes.letter))
   }
 
-  // renderRow = (row, index) => {
-  //   return (
-  //     <div key={index} className="row">
-  //       {row.map(this.renderSquare(index))}
-  //     </div>
-  //   )
-  // }
-  //
-  // renderSquare = rowIndex => (value, index) => {
-  //   return (
-  //     <Square key={index} value={value} />
-  //   )
-  // }
-
   render() {
     return (
       <div className="Result">
