@@ -1,4 +1,5 @@
 import { LETTER_GUESSED } from '../actions/types'
+import { START_GAME } from '../actions/types'
 // import { WRONG_GUESS } from '../actions/types'
 
 const initialState = {
@@ -9,10 +10,13 @@ const initialState = {
 
 export default (state = initialState, { type, payload } = {}) => {
   switch (type) {
+    case START_GAME :
+      console.log('Hey there')
+      return {...state, word: 'relax'};
     case LETTER_GUESSED :
       return {
         ...state, guesses: [...state.guesses, payload] };
-      default:
-        return state
+  default:
+    return state.guesses
   }
 }

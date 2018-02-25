@@ -1,2 +1,3 @@
 export const LETTER_GUESSED = 'LETTER_GUESSED'
 export const WRONG_GUESS = 'WRONG_GUESS'
+export const START_GAME = 'START_GAME'

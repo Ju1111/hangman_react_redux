@@ -3,7 +3,8 @@ import LogoImg from './game.png';
 import './App.css';
 import Title from './components/Title'
 import Guess from './components/Guess'
-import Game from './containers/Game'
+import CreateGameButton from './components/startGameButton'
+import Input from './components/input'
 
 class App extends Component {
   render() {
@@ -15,8 +16,9 @@ class App extends Component {
             <Title content="HANGMAAAAAAAAN"/>
           </div>
         </header>
-        <Game />
-        <div className="word">
+        <CreateGameButton />
+        <div className="guesses">
+          <Input className="input"/>
           <Guess />
         </div>
       </div>

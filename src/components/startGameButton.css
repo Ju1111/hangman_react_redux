@@ -1,0 +1,13 @@
+.CreateGameButton {
+  background-color: #CC0033;
+  border: 1px solid #9E0215;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive, 'Arial';
+}
+
+.CreateGameButton:hover {
+  background-color: #990000;
+}

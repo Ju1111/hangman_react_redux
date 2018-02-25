@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { guessLetter } from '../actions/guess'
+import { userInput } from '../actions/input'
 
 export class Guess extends PureComponent {
   static propTypes = {
@@ -17,4 +16,4 @@ export class Guess extends PureComponent {
   }
 }
 
-export default connect (guessLetter)(Guess)
+export default Guess

@@ -1,0 +1,9 @@
+.Input {
+  background-color: black;
+  color: white;
+  width: 20px;
+  padding: 1.2em;
+  border: 1px solid red;
+  border-radius: 3px;
+  box-shadow: 0 0;
+}
