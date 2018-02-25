@@ -11,10 +11,14 @@ class Input extends PureComponent {
       PropTypes.letter).isRequired
   }
 
-  handleSubmit = (event) => {
+  handleChange = (event) => {
     event.preventDefault();
+    console.log(event.target.value);
     this.props.userInput(event.target.value);
+    console.log(event.target.value);
     this.setState({guess: ''});
+    console.log(event.target.value);
+
   }
 
 
@@ -22,14 +26,11 @@ render() {
     return(
       <div>
         Guess a letter:
-        <form onSubmit={this.handleSubmit}>
-          <input
+        <form>
+          <input onChange={this.handleChange.bind(this)}
             className="userInput"
             type="text"
           />
-          <button type="submit" className="button">
-              Guess
-          </button>
         </form>
       </div>
     );
