@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+// import Guess from '../components/Guess'
 
 export class Game extends PureComponent {
   static propTypes = {
@@ -8,7 +9,7 @@ export class Game extends PureComponent {
       PropTypes.string).isRequired
   }
   render() {
-    console.log(this.props.guesses);
+    // console.log(this.props.guesses);
     return (
       <div className="Game">
         <h3>Your guesses: {this.props.guesses}</h3>

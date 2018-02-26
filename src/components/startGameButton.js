@@ -4,13 +4,14 @@ import './startGameButton.css'
 import { startGame } from '../actions/startGame'
 import { connect } from 'react-redux'
 
-export class CreateGameButton extends PureComponent {
+class CreateGameButton extends PureComponent {
   static propTypes = {
     startGame: PropTypes.func.isRequired
   }
 
-  handleClick = () => {
-    this.props.startGame()
+  handleClick = (event) => {
+    event.preventDefault();
+    this.props.startGame();
   }
 
   render() {
@@ -25,4 +26,4 @@ export class CreateGameButton extends PureComponent {
   }
 }
 
-export default connect (startGame) (CreateGameButton)
+export default connect (null, {startGame})(CreateGameButton)

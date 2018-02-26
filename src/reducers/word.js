@@ -13,6 +13,7 @@ export default (state = initialState, { type, payload } = {}) => {
     case START_GAME :
       return {...state, word: 'relax'};
     case LETTER_GUESSED :
+      // console.log('I reach this point');
       return {
         ...state, guesses:[...state.guesses, payload]};
   default:
