@@ -1,11 +1,11 @@
 import { LETTER_GUESSED } from '../actions/types'
 import { START_GAME } from '../actions/types'
-// import { WRONG_GUESS } from '../actions/types'
 
 const initialState = {
   wrongGuessCount: 0,
-  guesses: [],
-  word: 'coding',
+  wrongGuesses: [],
+  rightGuesses: [],
+  word: 'coding'
 }
 
 export default (state = initialState, { type, payload } = {}) => {
@@ -13,9 +13,14 @@ export default (state = initialState, { type, payload } = {}) => {
     case START_GAME :
       return {...state, word: 'relax'};
     case LETTER_GUESSED :
-      // console.log('I reach this point');
-      return {
-        ...state, guesses:[...state.guesses, payload]};
+      if (state.word.indexOf(payload) === -1) {
+          state.wrongGuessCount += 1
+          console.log(state.wrongGuessCount)
+          return{...state, wrongGuesses:[...state.wrongGuesses, payload]}
+      }
+      else {
+        return{...state, rightGuesses:[...state.rightGuesses, payload]}
+      }
   default:
     return state
   }

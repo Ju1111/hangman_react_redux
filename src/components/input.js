@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './input.css'
 import { connect } from 'react-redux'
-import { userInput } from '../actions/input'
+import { userInput } from '../actions/guess'
 
 
 class Input extends PureComponent {
@@ -22,7 +22,7 @@ render() {
     return(
       <div className="inputForm">
         Welcome to Hangman! Ready to go? Guess a letter:
-          <input onChange={this.handleChange}
+          <input onKeyUp={this.handleChange}
             className="userInput"
             type="text"
           />

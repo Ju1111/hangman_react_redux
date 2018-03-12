@@ -5,19 +5,19 @@ import { connect } from 'react-redux'
 
 export class Game extends PureComponent {
   static propTypes = {
-    guesses: PropTypes.arrayOf(
-      PropTypes.string).isRequired
+    wrongGuesses: PropTypes.arrayOf(PropTypes.string).isRequired,
+    rightGuesses: PropTypes.arrayOf(PropTypes.string).isRequired
   }
   render() {
-    // console.log(this.props.guesses);
     return (
       <div className="Game">
-        <h3>Your guesses: {this.props.guesses.join(',')}</h3>
+        <h3>Wrong guesses: {this.props.wrongGuesses.join(',')}</h3>
+        <h2>Word: {this.props.rightGuesses}</h2>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({Word:{guesses}}) => ({guesses})
+const mapStateToProps = ({Word:{wrongGuesses}, Word:{rightGuesses}}) => ({wrongGuesses, rightGuesses})
 
 export default connect(mapStateToProps)(Game)
