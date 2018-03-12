@@ -12,9 +12,9 @@ class Input extends PureComponent {
   }
 
   handleChange = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     this.props.userInput(event.target.value);
-    // event.target.value = ''
+    event.target.value = ''
   }
 
 

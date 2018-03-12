@@ -5,7 +5,7 @@ import { startGame } from '../actions/startGame'
 import { connect } from 'react-redux'
 
 class CreateGameButton extends PureComponent {
-  static propTypes = {
+  static PropTypes = {
     startGame: PropTypes.func.isRequired
   }
 

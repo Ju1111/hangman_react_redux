@@ -12,7 +12,7 @@ export class Game extends PureComponent {
     // console.log(this.props.guesses);
     return (
       <div className="Game">
-        <h3>Your guesses: {this.props.guesses}</h3>
+        <h3>Your guesses: {this.props.guesses.join(',')}</h3>
       </div>
     )
   }
