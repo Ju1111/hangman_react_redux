@@ -4,7 +4,6 @@ import './input.css'
 import { connect } from 'react-redux'
 import { userInput } from '../actions/guess'
 
-
 class Input extends PureComponent {
   static propTypes = {
     guesses: PropTypes.arrayOf(
@@ -12,11 +11,10 @@ class Input extends PureComponent {
   }
 
   handleChange = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     this.props.userInput(event.target.value);
     event.target.value = ''
   }
-
 
 render() {
     return(

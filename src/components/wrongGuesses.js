@@ -1,20 +1,21 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { wrongLetter } from '--/actions/wrongGuess'
 
 export class Wrong extends PureComponent {
   static propTypes = {
-    guess: PropTypes.function.isRequired,
+    wrongGuessCount: PropTypes.number.isRequired,
   }
   render () {
-    const { guessCounts } = this.props
+    // const { wrongGuessCount } = this.props
     return (
       <div>
-        <h4>'Number of wrong guesses: '{guessCounts}</h4>
+        <h4>Ammount wrong guesses: {this.props.wrongGuessCount}</h4>
       </div>
     )
   }
 }
 
-export default connect (wrongLetter)(Wrong)
+const mapStateToProps = ({Word: {wrongGuessCount}}) => ({wrongGuessCount})
+
+export default connect (mapStateToProps)(Wrong)

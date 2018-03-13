@@ -3,9 +3,10 @@ import { START_GAME } from '../actions/types'
 
 const initialState = {
   wrongGuessCount: 0,
-  wrongGuesses: [],
-  rightGuesses: [],
-  word: 'coding'
+  guesses: [],
+  // rightGuesses: [],
+  word: 'coding',
+  answer: ''
 }
 
 export default (state = initialState, { type, payload } = {}) => {
@@ -16,12 +17,24 @@ export default (state = initialState, { type, payload } = {}) => {
       if (state.word.indexOf(payload) === -1) {
           state.wrongGuessCount += 1
           console.log(state.wrongGuessCount)
-          return{...state, wrongGuesses:[...state.wrongGuesses, payload]}
+          return{...state, guesses:[...state.guesses, payload]}
       }
       else {
-        return{...state, rightGuesses:[...state.rightGuesses, payload]}
+        return{...state, guesses:[...state.guesses, payload]}
       }
   default:
     return state
   }
 }
+
+// displayGuess = () => {
+//   console.log('Hello');
+//   const { word, guesses } = this.props
+//   // const guesses = rightGuesses.concat(wrongGuesses)
+//   return word.split('').map(char =>
+//    { if (guesses.includes(char)) {
+//       return char
+//      }
+//      return '_'
+//    }).join('')
+//  }
