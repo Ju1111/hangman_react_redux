@@ -5,7 +5,7 @@ const initialState = {
   wrongGuessCount: 0,
   guesses: [],
   word: 'coding',
-  answer: ''
+  rightGuessCount: 0
 }
 
 export default (state = initialState, { type, payload } = {}) => {
@@ -19,6 +19,7 @@ export default (state = initialState, { type, payload } = {}) => {
           return{...state, guesses:[...state.guesses, payload]}
       }
       else {
+        state.rightGuessCount += 1
         return{...state, guesses:[...state.guesses, payload]}
       }
   default:
