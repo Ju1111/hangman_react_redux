@@ -18,7 +18,8 @@ export class Result extends PureComponent {
         return (
           <div className="Won">
             <div className="message">
-              <p>YOU WON :)</p>
+              <h2>YOU WON :)</h2>
+              <p>The word was indeed: <br/>{ this.props.word }</p>
             </div>
           </div>
         )

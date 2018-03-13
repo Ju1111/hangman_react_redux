@@ -12,13 +12,15 @@ export default (state = initialState, { type, payload } = {}) => {
     case START_GAME :
       return {...state, word: 'relax'};
     case LETTER_GUESSED :
-      if (state.word.indexOf(payload) === -1) {
+      if (!state.guesses.includes(payload)) {
+        if (state.word.indexOf(payload) === -1) {
           state.wrongGuessCount += 1
           console.log(state.wrongGuessCount)
           return{...state, guesses:[...state.guesses, payload]}
-      }
-      else {
-        return{...state, guesses:[...state.guesses, payload]}
+        }
+        else {
+          return{...state, guesses:[...state.guesses, payload]}
+        }
       }
   default:
     return state
