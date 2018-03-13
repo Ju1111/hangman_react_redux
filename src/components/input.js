@@ -11,15 +11,13 @@ class Input extends PureComponent {
   }
 
   handleChange = (event) => {
-    // event.preventDefault();
     this.props.userInput(event.target.value);
     event.target.value = ''
   }
 
 render() {
     return(
-      <div className="inputForm">
-        Welcome to Hangman! Ready to go? Guess a letter:
+      <div>
           <input onKeyUp={this.handleChange}
             className="userInput"
             type="text"

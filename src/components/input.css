@@ -2,13 +2,13 @@
   background-color: black;
   color: white;
   width: 20px;
+  height: 20px;
   padding: 1.2em;
   margin: 2em;
-  border: 1px solid red;
+  border: 2px solid red;
   border-radius: 3px;
   box-shadow: 0 0;
-}
-
-.inputForm {
-  margin-top: 4em;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive, 'Arial';
+  text-align: center;
 }

@@ -14,13 +14,13 @@ class Guess extends PureComponent {
       (guesses.includes(char) ? char:'_')).join('')
       return (
         <div>
-          <p>{showWord}</p>
+          <p>{ showWord }</p>
         </div>
       )
   }
 }
 
-const mapStateToProps = ({Word:{guesses}, Word:{word}}) =>
-  ({guesses, word})
+const mapStateToProps = ({ Word:{ guesses }, Word:{ word } }) =>
+  ({ guesses, word })
 
 export default connect (mapStateToProps)(Guess)

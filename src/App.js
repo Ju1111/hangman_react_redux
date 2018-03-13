@@ -7,6 +7,7 @@ import CreateGameButton from './components/startGameButton'
 import Input from './components/input'
 import Guess from './components/Guess'
 import Wrong from './components/wrongGuesses'
+import Result from './components/GameResult'
 
 class App extends Component {
   render() {
@@ -19,10 +20,13 @@ class App extends Component {
           </div>
         </header>
         <div className="guesses">
+          <h2>Welcome to Hangman! Ready to go? Guess a letter:</h2>
           <Input className="input"/>
           <Game />
           <Guess />
           <Wrong />
+
+          <Result />
         </div>
         <CreateGameButton />
       </div>

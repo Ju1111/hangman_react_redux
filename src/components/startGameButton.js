@@ -6,11 +6,12 @@ import { connect } from 'react-redux'
 
 class CreateGameButton extends PureComponent {
   static PropTypes = {
-    startGame: PropTypes.func.isRequired
+    startGame: PropTypes.func.isRequired,
+    label: PropTypes.string
   }
 
   handleClick = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     this.props.startGame();
   }
 
@@ -20,7 +21,7 @@ class CreateGameButton extends PureComponent {
         onClick={this.handleClick}
         className="CreateGameButton"
       >
-        New Game
+        { this.props.label || 'New Game'}
       </button>
     )
   }
