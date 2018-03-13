@@ -6,13 +6,15 @@ import './GameResult.css'
 export class Result extends PureComponent {
   static PropTypes = {
     wrongGuessCount: PropTypes.number.isRequired,
-    rightGuessCount: PropTypes.number.isRequired,
+    guesses: PropTypes.arrayOf(PropTypes.string).isRequired,
     word: PropTypes.string.isRequired
   }
 
   render() {
-    const { wrongGuessCount, rightGuessCount, word } = this.props
-    if (rightGuessCount === word.length)
+    const { wrongGuessCount, guesses, word } = this.props
+    const showWord = word.split('').map(char =>
+      (guesses.includes(char) ? char:'_')).join('')
+    if (word === showWord)
         return (
           <div className="Won">
             <div className="message">
@@ -32,6 +34,6 @@ export class Result extends PureComponent {
  }
 }
 
-const mapStateToProps = ({ Word: { wrongGuessCount }, Word:{ rightGuessCount }, Word:{ word } }) => ({ wrongGuessCount, rightGuessCount, word })
+const mapStateToProps = ({ Word: { wrongGuessCount }, Word:{ guesses }, Word:{ word } }) => ({ wrongGuessCount, guesses, word })
 
 export default connect(mapStateToProps)(Result)
