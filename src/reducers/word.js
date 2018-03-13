@@ -4,7 +4,6 @@ import { START_GAME } from '../actions/types'
 const initialState = {
   wrongGuessCount: 0,
   guesses: [],
-  // rightGuesses: [],
   word: 'coding',
   answer: ''
 }
@@ -26,15 +25,3 @@ export default (state = initialState, { type, payload } = {}) => {
     return state
   }
 }
-
-// displayGuess = () => {
-//   console.log('Hello');
-//   const { word, guesses } = this.props
-//   // const guesses = rightGuesses.concat(wrongGuesses)
-//   return word.split('').map(char =>
-//    { if (guesses.includes(char)) {
-//       return char
-//      }
-//      return '_'
-//    }).join('')
-//  }

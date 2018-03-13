@@ -7,10 +7,9 @@ export class Wrong extends PureComponent {
     wrongGuessCount: PropTypes.number.isRequired,
   }
   render () {
-    // const { wrongGuessCount } = this.props
     return (
       <div>
-        <h4>Ammount wrong guesses: {this.props.wrongGuessCount}</h4>
+        <h4>Ammount of wrong guesses: {this.props.wrongGuessCount}</h4>
       </div>
     )
   }
