@@ -18,7 +18,7 @@ export class Result extends PureComponent {
     if (word === showWord)
         return (
           <div className="Won">
-            <div className="message">
+            <div className="Message">
               <h2>YOU WON :)</h2>
               <p>The word was indeed: <br/>{ this.props.word }</p>
             </div>
@@ -27,9 +27,9 @@ export class Result extends PureComponent {
     else if (wrongGuessCount >= 6)
       return (
         <div className="Lost">
-          <div className="message">
+          <div className="Message">
             <p>GAME OVER</p>
-            <img alt="hangman" src={ hangFinal }/>
+            <img alt="hangman" className="Hangman" src={ hangFinal }/>
           </div>
         </div>
       )

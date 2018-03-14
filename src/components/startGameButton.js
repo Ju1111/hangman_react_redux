@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import './startGameButton.css'
+import './StartGameButton.css'
 import { startGame } from '../actions/startGame'
 import { connect } from 'react-redux'
 

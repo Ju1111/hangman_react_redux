@@ -1,14 +1,15 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import './ShowGuesses.css'
 
-export class Game extends PureComponent {
+export class Guess extends PureComponent {
   static propTypes = {
     guesses: PropTypes.arrayOf(PropTypes.string).isRequired
   }
   render() {
     return (
-      <div className="Game">
+      <div className="Guesses">
         <h3>Your guesses: {this.props.guesses.join(',')}</h3>
       </div>
     )
@@ -17,4 +18,4 @@ export class Game extends PureComponent {
 
 const mapStateToProps = ({ word:{ guesses } }) => ({ guesses })
 
-export default connect(mapStateToProps)(Game)
+export default connect(mapStateToProps)(Guess)

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import './WrongGuesses.css'
 
 export class Wrong extends PureComponent {
   static propTypes = {
@@ -8,8 +9,8 @@ export class Wrong extends PureComponent {
   }
   render () {
     return (
-      <div>
-        <h4>Amount of wrong guesses: {this.props.wrongGuessCount}</h4>
+      <div className="WrongGuess">
+        <h3>Amount of wrong guesses: {this.props.wrongGuessCount}</h3>
       </div>
     )
   }

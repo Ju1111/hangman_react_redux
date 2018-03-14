@@ -19,7 +19,7 @@ render() {
     return(
       <div>
           <input onKeyUp={this.handleChange}
-            className="userInput"
+            className="UserInput"
             type="text"
           />
       </div>

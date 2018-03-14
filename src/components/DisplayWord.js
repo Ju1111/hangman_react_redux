@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from "react-redux";
 
-class Guess extends PureComponent {
+class DisplayWord extends PureComponent {
   static propTypes = {
     guesses: PropTypes.arrayOf(PropTypes.string).isRequired,
     word: PropTypes.string.isRequired,
@@ -23,4 +23,4 @@ class Guess extends PureComponent {
 const mapStateToProps = ({ word:{ guesses, word } }) =>
   ({ guesses, word })
 
-export default connect (mapStateToProps)(Guess)
+export default connect (mapStateToProps)(DisplayWord)

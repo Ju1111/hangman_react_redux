@@ -2,13 +2,10 @@ import React, { Component } from 'react';
 import LogoImg from './game.png';
 import './App.css';
 import Title from './components/Title'
-import Game from './components/ShowGuesses'
-// import CreateGameButton from './components/startGameButton'
-import Input from './components/Input'
-import Guess from './components/Guess'
-import Wrong from './components/WrongGuesses'
 import Result from './components/GameResult'
-import Hangman from './components/Image'
+import Game from './containers/Game'
+import CreateGameButton from './components/StartGameButton'
+
 
 class App extends Component {
   render() {
@@ -22,12 +19,7 @@ class App extends Component {
         </header>
         <div className="guesses">
           <h2>Welcome to Hangman! Ready to go? Guess a letter:</h2>
-          <Input className="input"/>
           <Game />
-          <Guess />
-          <Wrong />
-          <Hangman />
-
           <Result />
         </div>
       </div>

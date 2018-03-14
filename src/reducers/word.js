@@ -11,7 +11,7 @@ const initialState = {
 export default (state = initialState, { type, payload } = {}) => {
   switch (type) {
     case START_GAME :
-      return {...state, word: 'relax'};
+      return [state.wrongGuessCount===0, state.guesses=[], state.word=RandomWord]
     case LETTER_GUESSED :
       console.log(state.word)
       if (!state.guesses.includes(payload)) {

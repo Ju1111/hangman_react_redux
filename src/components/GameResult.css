@@ -12,27 +12,28 @@
   overflow: hidden;
 }
 
-.Lost .message {
+.Message {
   border-radius: 20px;
   box-shadow: 10px 10px 30px rgba(0,0,0,.2);
   flex: 1;
   padding: 40px;
   text-align: center;
   max-width: 500px;
-  background-color: red;
   background-size: contain;
+}
+
+.Lost .Message {
+  background-color: red;
   font-size: 50px;
 }
 
-.Won .message {
-  border-radius: 20px;
-  box-shadow: 10px 10px 30px rgba(0,0,0,.2);
-  flex: 1;
-  padding: 40px;
-  text-align: center;
-  max-width: 500px;
+.Won .Message {
   background-color: black;
   color: white;
-  background-size: contain;
   font-size: 30px;
+}
+
+.Hangman {
+  height: 300px;
+  width: 250px;
 }
