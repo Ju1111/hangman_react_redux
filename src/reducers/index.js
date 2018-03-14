@@ -1,5 +1,5 @@
-import Word from './word'
+import word from './word'
 
 export default {
-  Word,
+  word,
 }

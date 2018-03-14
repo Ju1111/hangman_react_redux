@@ -4,7 +4,7 @@ import { START_GAME } from '../actions/types'
 const initialState = {
   wrongGuessCount: 0,
   guesses: [],
-  word: 'juliaisawesome',
+  word: 'coding',
 }
 
 export default (state = initialState, { type, payload } = {}) => {

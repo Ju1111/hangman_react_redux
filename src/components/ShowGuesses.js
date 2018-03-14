@@ -15,6 +15,6 @@ export class Game extends PureComponent {
   }
 }
 
-const mapStateToProps = ({Word:{guesses}}) => ({guesses})
+const mapStateToProps = ({ word:{ guesses } }) => ({ guesses })
 
 export default connect(mapStateToProps)(Game)

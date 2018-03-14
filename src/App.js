@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import LogoImg from './game.png';
 import './App.css';
 import Title from './components/Title'
-import Game from './containers/Game'
-import CreateGameButton from './components/startGameButton'
+import Game from './components/ShowGuesses'
+// import CreateGameButton from './components/startGameButton'
 import Input from './components/input'
 import Guess from './components/Guess'
 import Wrong from './components/wrongGuesses'
 import Result from './components/GameResult'
+import Hangman from './components/Image'
 
 class App extends Component {
   render() {
@@ -25,10 +26,10 @@ class App extends Component {
           <Game />
           <Guess />
           <Wrong />
+          <Hangman />
 
           <Result />
         </div>
-        <CreateGameButton />
       </div>
     );
   }

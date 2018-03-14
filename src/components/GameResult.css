@@ -1,4 +1,4 @@
-.Lost {
+.Lost, .Won{
   background-color: rgba(0,0,0,.3);
   display: flex;
   top: 0;
@@ -22,20 +22,6 @@
   background-color: red;
   background-size: contain;
   font-size: 50px;
-}
-
-.Won {
-  background-color: rgba(0,0,0,.3);
-  display: flex;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: 99;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .Won .message {

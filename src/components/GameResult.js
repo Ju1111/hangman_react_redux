@@ -35,6 +35,7 @@ export class Result extends PureComponent {
  }
 }
 
-const mapStateToProps = ({ Word: { wrongGuessCount }, Word:{ guesses }, Word:{ word } }) => ({ wrongGuessCount, guesses, word })
+const mapStateToProps = ({ word: { wrongGuessCount, guesses, word } }) => 
+  ({ wrongGuessCount, guesses, word })
 
 export default connect(mapStateToProps)(Result)

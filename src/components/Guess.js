@@ -20,7 +20,7 @@ class Guess extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ Word:{ guesses }, Word:{ word } }) =>
+const mapStateToProps = ({ word:{ guesses, word } }) =>
   ({ guesses, word })
 
 export default connect (mapStateToProps)(Guess)

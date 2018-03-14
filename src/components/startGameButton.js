@@ -27,4 +27,4 @@ class CreateGameButton extends PureComponent {
   }
 }
 
-export default connect (null, {startGame})(CreateGameButton)
+export default connect (null, { startGame })(CreateGameButton)
