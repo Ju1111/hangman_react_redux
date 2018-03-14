@@ -4,9 +4,9 @@ import './App.css';
 import Title from './components/Title'
 import Game from './components/ShowGuesses'
 // import CreateGameButton from './components/startGameButton'
-import Input from './components/input'
+import Input from './components/Input'
 import Guess from './components/Guess'
-import Wrong from './components/wrongGuesses'
+import Wrong from './components/WrongGuesses'
 import Result from './components/GameResult'
 import Hangman from './components/Image'
 

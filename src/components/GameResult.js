@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import './GameResult.css'
+import hangFinal from './hangmans/hang_final.png'
 
 export class Result extends PureComponent {
   static PropTypes = {
@@ -28,6 +29,7 @@ export class Result extends PureComponent {
         <div className="Lost">
           <div className="message">
             <p>GAME OVER</p>
+            <img alt="hangman" src={ hangFinal }/>
           </div>
         </div>
       )
@@ -35,7 +37,7 @@ export class Result extends PureComponent {
  }
 }
 
-const mapStateToProps = ({ word: { wrongGuessCount, guesses, word } }) => 
+const mapStateToProps = ({ word: { wrongGuessCount, guesses, word } }) =>
   ({ wrongGuessCount, guesses, word })
 
 export default connect(mapStateToProps)(Result)

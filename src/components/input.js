@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import './input.css'
+import './Input.css'
 import { connect } from 'react-redux'
 import { userInput } from '../actions/guess'
 

@@ -8,24 +8,41 @@ import hang3 from './hangmans/hang_3.png'
 import hang4 from './hangmans/hang_4.png'
 import hang5 from './hangmans/hang_5.png'
 import hang6 from './hangmans/hang_6.png'
-import hangFinal from './hangmans/hang_final.png'
 
 class Hangman extends PureComponent {
   static PropTypes = {
-    wrongGuessCount: PropTypes.number.isRequired
+    wrongGuessCount: PropTypes.number.isRequired,
+    displayImage: PropTypes.function
   }
 
-  const 
+  displayImage = () => {
+    const { wrongGuessCount } = this.props
+    switch(wrongGuessCount) {
+      case 0:
+        return hangStart
+      case 1:
+        return hang1
+      case 2:
+        return hang2
+      case 3:
+        return hang3
+      case 4:
+        return hang4
+      case 5:
+        return hang5
+      case 6:
+        return hang6
+    default:
+     return null
+   }
+  }
 
   render() {
-    const { wrongGuessCount } = this.props
-    if (wrongGuessCount === 0)
-      return (
-        <div>
-          <img className="Image" alt="hangman" src={ hangStart }/>
-        </div>
-      )
-    return null
+    return (
+      <div className="Image">
+        <img className="Display" alt="hangman" src={ this.displayImage() }/>
+      </div>
+    )
   }
 }
 
