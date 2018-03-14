@@ -8,6 +8,7 @@ import hang3 from './hangmans/hang_3.png'
 import hang4 from './hangmans/hang_4.png'
 import hang5 from './hangmans/hang_5.png'
 import hang6 from './hangmans/hang_6.png'
+import './Image.css'
 
 class Hangman extends PureComponent {
   static PropTypes = {
@@ -39,8 +40,8 @@ class Hangman extends PureComponent {
 
   render() {
     return (
-      <div className="Image">
-        <img className="Display" alt="hangman" src={ this.displayImage() }/>
+      <div>
+        <img className="Image" alt="hangman" src={ this.displayImage() }/>
       </div>
     )
   }
