@@ -9,7 +9,6 @@
   z-index: 99;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .Message {
@@ -24,7 +23,7 @@
 
 .Lost .Message {
   background-color: red;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .Won .Message {

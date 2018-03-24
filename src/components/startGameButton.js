@@ -20,7 +20,7 @@ class CreateGameButton extends PureComponent {
         onClick={this.handleClick}
         className="CreateGameButton"
       >
-        { this.props.label || 'New Game'}
+        { 'Play Again'}
       </button>
     )
   }

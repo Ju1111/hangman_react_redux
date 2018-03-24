@@ -4,7 +4,7 @@ import './App.css';
 import Title from './components/Title'
 import Result from './components/GameResult'
 import Game from './containers/Game'
-import CreateGameButton from './components/StartGameButton'
+
 
 
 class App extends Component {
@@ -20,7 +20,6 @@ class App extends Component {
         <div className="guesses">
           <h2>Welcome to Hangman! Ready to go? Guess a letter:</h2>
           <Game />
-          <CreateGameButton />
           <Result />
         </div>
       </div>

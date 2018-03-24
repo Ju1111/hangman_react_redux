@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import './GameResult.css'
 import hangFinal from './hangmans/hang_final.png'
+import CreateGameButton from './StartGameButton'
 
 export class Result extends PureComponent {
   static PropTypes = {
@@ -20,7 +21,8 @@ export class Result extends PureComponent {
           <div className="Won">
             <div className="Message">
               <h2>YOU WON :)</h2>
-              <p>The word was indeed: <br/>{ this.props.word }</p>
+              <p>The word was indeed: <br/><br/>{ this.props.word }</p>
+              <CreateGameButton />
             </div>
           </div>
         )
@@ -28,9 +30,10 @@ export class Result extends PureComponent {
       return (
         <div className="Lost">
           <div className="Message">
-            <h4>GAME OVER</h4>
-            <p>The word was: <br/>{ this.props.word }</p>
+            <p>GAME OVER</p>
             <img alt="hangman" className="Hangman" src={ hangFinal }/>
+            <p>The word was: <br/><br/>{ this.props.word }</p>
+            <CreateGameButton />
           </div>
         </div>
       )
