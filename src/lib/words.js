@@ -23,4 +23,7 @@ const word = ['coding',
   'starwars'
   ]
 
-export const RandomWord = word[Math.floor(Math.random() * word.length)]
+export const RandomWord = () => {
+  let newWord = word[Math.floor(Math.random() * word.length)]
+  return newWord
+}

@@ -20,6 +20,7 @@ class App extends Component {
         <div className="guesses">
           <h2>Welcome to Hangman! Ready to go? Guess a letter:</h2>
           <Game />
+          <CreateGameButton />
           <Result />
         </div>
       </div>

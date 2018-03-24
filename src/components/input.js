@@ -6,8 +6,7 @@ import { userInput } from '../actions/guess'
 
 class Input extends PureComponent {
   static propTypes = {
-    guesses: PropTypes.arrayOf(
-      PropTypes.string).isRequired
+    guesses: PropTypes.arrayOf(PropTypes.string)
   }
 
   handleChange = (event) => {

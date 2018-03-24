@@ -13,7 +13,7 @@ class DisplayWord extends PureComponent {
     const showWord = word.split('').map(char =>
       (guesses.includes(char) ? char:'_')).join('')
       return (
-        <div>
+        <div className="Word">
           <p>{ showWord }</p>
         </div>
       )

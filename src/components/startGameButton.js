@@ -11,7 +11,6 @@ class CreateGameButton extends PureComponent {
   }
 
   handleClick = (event) => {
-    // event.preventDefault();
     this.props.startGame();
   }
 

@@ -28,7 +28,8 @@ export class Result extends PureComponent {
       return (
         <div className="Lost">
           <div className="Message">
-            <p>GAME OVER</p>
+            <h4>GAME OVER</h4>
+            <p>The word was: <br/>{ this.props.word }</p>
             <img alt="hangman" className="Hangman" src={ hangFinal }/>
           </div>
         </div>
